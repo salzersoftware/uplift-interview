@@ -86,6 +86,8 @@ class ProviderDataLoader:
           
           if does_provider_pass_filter:
             result.append(provider)
+      else:
+        result = self.cached_data_values
 
       if ordering:
         # TODO: Note, that the current implementation expects, and checks against,

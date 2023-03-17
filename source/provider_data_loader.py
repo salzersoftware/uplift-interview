@@ -116,7 +116,8 @@ class ProviderDataLoader:
     elif prim_type == str:
       return str(value)
     else:
-      raise ValueError(f"Unknown type: {str(type)}")
+      message: str = f"Unknown type: {str(type)}"
+      raise ValueError(message)
 
 
 

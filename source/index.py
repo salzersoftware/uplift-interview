@@ -51,8 +51,7 @@ def providers():
         elif arg.startswith(QUERY_STRING_ORDER_PREFIX):
             order_key: str = arg.replace(QUERY_STRING_ORDER_PREFIX, '')
             ordering[order_key] = int(request.args[arg])
-    print('hey')
-    print(filters)
+
     providers: list[Any] = data_loader.get_providers_with_options(
         filters=filters, ordering=ordering
     )
